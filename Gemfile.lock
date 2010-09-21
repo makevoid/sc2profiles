@@ -1,0 +1,70 @@
+GIT
+  remote: git://github.com/datamapper/dm-core.git
+  revision: db665e4
+  specs:
+    dm-core (1.0.2)
+      addressable (~> 2.2)
+      extlib (~> 0.9.15)
+
+GIT
+  remote: git://github.com/datamapper/dm-do-adapter.git
+  revision: 3eb7b98
+  specs:
+    dm-do-adapter (1.0.2)
+      data_objects (~> 0.10.2)
+      dm-core (~> 1.0.2)
+
+GIT
+  remote: git://github.com/datamapper/dm-migrations.git
+  revision: faea4c2
+  specs:
+    dm-migrations (1.0.2)
+      dm-core (~> 1.0.2)
+
+GIT
+  remote: git://github.com/nex3/haml.git
+  revision: 57ffc2b
+  specs:
+    haml (3.1.0)
+
+GIT
+  remote: git://github.com/sinatra/sinatra.git
+  revision: 1187a86
+  specs:
+    sinatra (1.0)
+      rack (>= 1.0)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    addressable (2.2.1)
+    data_objects (0.10.2)
+      addressable (~> 2.1)
+    dm-mysql-adapter (1.0.2)
+      dm-do-adapter (~> 1.0.2)
+      do_mysql (~> 0.10.2)
+    do_mysql (0.10.2)
+      data_objects (= 0.10.2)
+    do_mysql (0.10.2-x86-mingw32)
+      data_objects (= 0.10.2)
+    extlib (0.9.15)
+    mechanize (1.0.0)
+      nokogiri (>= 1.2.1)
+    nokogiri (1.4.3.1)
+    nokogiri (1.4.3.1-x86-mingw32)
+    rack (1.2.1)
+    rake (0.8.7)
+
+PLATFORMS
+  ruby
+  x86-mingw32
+
+DEPENDENCIES
+  dm-core!
+  dm-do-adapter!
+  dm-migrations!
+  dm-mysql-adapter
+  haml!
+  mechanize
+  rake
+  sinatra!
