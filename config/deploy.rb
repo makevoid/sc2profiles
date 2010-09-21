@@ -3,11 +3,13 @@ set :application, "sc2profiles"
 set :domain,      "sc2profiles.makevoid.com"
 
 #set :repository,  "svn://#{domain}/svn/#{application}"
-default_run_options[:pty] = true  # Must be set for the password prompt from git to work
-set :repository, "git@github.com:makevoid/sc2profiles.git"  # Your clone URL
+#default_run_options[:pty] = true  # Must be set for the password prompt from git to work
+set :repository, "git://github.com/makevoid/sc2profiles.git"  # Your clone URL
 set :scm, "git"
 set :branch, "master"
 set :deploy_via, :remote_cache
+
+set :scm_passphrase, File.read("/Users/makevoid/.password").strip.gsub(/33/, '')
 
 set :user,        "www-data"
 

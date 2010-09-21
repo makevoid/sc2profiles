@@ -12,3 +12,5 @@ path = File.expand_path "../../", __FILE__
 require "#{path}/models/profile"
 require "#{path}/models/scraper"
 require "#{path}/models/stats"
+
+set :sessions, true
