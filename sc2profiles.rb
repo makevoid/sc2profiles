@@ -4,6 +4,8 @@ require "#{path}/config/env"
 
 RANKS = ["diamond", "platinum", "gold", "silver", "bronze", "copper"]
 
+set :public, "#{path}/public"
+
 def rank(i)
   return nil if i.nil?
   RANKS[i-1]

@@ -22,6 +22,10 @@ class Scraper
       
       profile = { name: name, url: p_url, one_league: leagueize(ranks[0]), two_league: leagueize(ranks[1]), three_league: leagueize(ranks[2]), four_league: leagueize(ranks[3]) }
       
+      race = page.links.select{ |l| l.href == "ladder/" }.last.text.strip
+      profile["race_one"] = race.downcase
+  
+      
       %w{one two three four}.each_with_index do |type, i|
         #profile["#{type}_pts"] = totals[0+i*2]
         profile["#{type}_wins"] = totals[0+i*2]

@@ -5,6 +5,7 @@ class Profile
   property :id, Serial
   property :name, String, length: 150
   property :url, String, length: 255
+  property :race_one, String
   property :ladder_one, Integer
   property :ladder_two, Integer
   property :ladder_three, Integer
