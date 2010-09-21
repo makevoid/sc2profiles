@@ -1,7 +1,8 @@
 require "dm-core"
 require 'dm-migrations'
 #mysql:
-DataMapper.setup(:default, "mysql://#{"root:#{File.read("/home/www-data/.password").strip}@" if ENV['RACK_ENV'] == "production"}localhost/sc2profiles_dev")
+auth = "root:#{File.read("/home/www-data/.password").strip}@" if ENV['RACK_ENV'] == "production"
+DataMapper.setup(:default, "mysql://#{auth}localhost/sc2profiles_dev")
 
 #sqlite:
 #DataMapper.setup(:default, "sqlite3://#{Dir.pwd}/db/sc2profiles.sqlite")

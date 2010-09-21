@@ -7,6 +7,7 @@ default_run_options[:pty] = true  # Must be set for the password prompt from git
 set :repository, "git@github.com:makevoid/sc2profiles.git"  # Your clone URL
 set :scm, "git"
 set :branch, "master"
+set :deploy_via, :remote_cache
 
 set :user,        "www-data"
 
