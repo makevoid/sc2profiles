@@ -31,6 +31,6 @@
           %td.one_playeds=  profile.one_wins
           %td.one_division #{profile.one_division} ##{profile.one_rank}
         
-  - gap = ENV["RACK_ENV"] == "production" ? 1.hour : 0
+  - gap = ENV["RACK_ENV"] == "production" ? 3600 : 0
   - upd_at = Stats.first.updated_at + gap    
   %div.ultimo_aggiornamento= upd_at.strftime("Ultimo aggiornamento: %d/%m/%Y %H:%M") unless upd_at.blank?
