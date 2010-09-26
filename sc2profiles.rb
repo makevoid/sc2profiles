@@ -5,6 +5,7 @@ require "#{path}/config/env"
 RANKS = ["diamond", "platinum", "gold", "silver", "bronze", "copper"]
 
 set :public, "#{path}/public"
+set :session, true
 
 def rank(i)
   return nil if i.nil?
