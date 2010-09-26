@@ -48,9 +48,9 @@ you should see a database error, then visit **http://localhost:port/migrate** to
 
 finally visit **http://localhost:port/scrape** to start scraping the profiles, the table in / will be full of datas 
 
-(note: it's better to remove these two route in production, but they're handy in development, sinatra is so easy that's almost no need to use things like rake or thor to manage tasks)
+(note: it's better to remove these two routes in production. They're handy in development, sinatra is so easy that there is almost no need to use things like rake or thor to manage tasks in early prototyping phases,)
 
-also change the style because this is made to match our team's site colors
+also change the style because this is made to match our sc2 team's site colors
 
 ---
 
