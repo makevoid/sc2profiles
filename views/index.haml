@@ -21,7 +21,7 @@
           %td.name
             %img.race{ src: "/images/#{profile.race_one == "casuale" ? "random" :  profile.race_one}.png" }
             %div 
-              %a{ href: profile.url }= profile.name
+              %a{ href: profile.url, target: "_blank" }= profile.name
             
           %td.one_pts  
             %img.badge{style:"width: 16px;", src: "http://eu.battle.net/sc2/static/images/icons/league/#{rank profile.one_league}-small.png" }
