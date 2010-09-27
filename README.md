@@ -54,6 +54,16 @@ also change the style because this is made to match our sc2 team's site colors
 
 ---
 
+**Load irb:**
+
+    irb -r ./config/env.rb
+
+then the env will load with it's dm models and you can do something like:
+
+    Profile.first  #=> first profile 
+    Profile.all(race: "zerg") #=> all zerg players
+    # ...
+
 notes:  
 
 - works on win/osx/ubuntu
