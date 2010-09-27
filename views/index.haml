@@ -14,6 +14,7 @@
         %th Wins
         %th Lose
         %th Played
+        %th Win ratio
         %th Division-Rank
       - Profile.all.each_with_index do |profile, idx|
         %tr{ class: "#{"alt" if idx % 2 == 0}" }
@@ -29,6 +30,9 @@
           %td.one_wins=     profile.one_playeds
           %td.one_lose=     profile.one_wins-profile.one_playeds
           %td.one_playeds=  profile.one_wins
+          %td.one_ratio
+            - var = (profile.one_playeds.to_f/profile.one_wins*100*100).round.to_s 
+            = "#{var[0..-3]},#{var[-2..-1]}%"
           %td.one_division #{profile.one_division} ##{profile.one_rank}
         
   - gap = ENV["RACK_ENV"] == "production" ? 3600 : 0
