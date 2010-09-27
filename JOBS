@@ -1,0 +1,9 @@
+# example of a crontab
+
+2 0 * * * wget http://sc2profiles.makevoid.com/scrape; rm -f scrape
+
+# replace sc2profiles.makevoid.com with your app host, run every night at midnight (00:02) and scrape profiles, this route (/scrape) should not be discovered by non-good-intentioned users because scraping is an "heavvy action". The real solution is to fire a rake task and hide /scrape in production
+
+# a solution:
+
+2 0 * * * RACK_ENV=production bundle exec rake scraper:scrape
