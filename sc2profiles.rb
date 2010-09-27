@@ -18,12 +18,12 @@ get '/' do
   haml :index
 end
 
-unless ENV["RACK_ENV"] == "production"
-
   get '/scrape' do
     Scraper.scrape
     "scraped successfully!"
   end
+
+unless ENV["RACK_ENV"] == "production"
 
   get '/migrate' do
     DataMapper.auto_migrate!
