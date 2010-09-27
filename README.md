@@ -16,11 +16,15 @@ create database sc2profiles_dev and/or edit the configuration in config/env.rb
 sqlite: if you prefer sqlite over mysql edit config/env.rb and Gemfile and switch the code commented with #sqlite over the one commented with #mysql.
 
 
+
 **Dependencies:**
+
+you need ruby 1.9 with bundler gem installed (gem install bundler)
+then run:
 
     bundle install
 
-edit public/profiles.txt and add your profiles
+to install all the dependencies
 
 
 **Start the server:**
@@ -51,6 +55,8 @@ finally visit **http://localhost:port/scrape** to start scraping the profiles, t
 (note: it's better to remove these two routes in production. They're handy in development, sinatra is so easy that there is almost no need to use things like rake or thor to manage tasks in early prototyping phases,)
 
 also change the style because this is made to match our sc2 team's site colors
+
+note: you can edit public/profiles.txt and add your own profiles
 
 ---
 
