@@ -1,5 +1,7 @@
 # Sc2Profiles
 
+demo: [sc2profiles.makevoid.com]"http://sc2profiles.makevoid.com"
+
 ## scrape starcraft2 battle.net profiles and view them with sinatra
 
 by makevoid and Dakkino
