@@ -15,7 +15,7 @@ class Scraper
     profile_urls.map do |p_url|
       page = agent.get(p_url)
       
-      name = page.search("h2").inner_text.match(/(\w+)#/)[1]
+      name = page.search("h2").inner_text#.match(/(\w+)#/)
       ranks = page.body.scan(/icons\/league\/(\w+)-medium/)
       totals = page.search(".totals").map{|n| n.inner_text }.map{ |n| n.to_i }
 
