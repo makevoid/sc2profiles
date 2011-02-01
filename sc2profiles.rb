@@ -4,7 +4,7 @@ path = File.expand_path "../", __FILE__
 
 require "#{path}/config/env"
 
-RANKS = ["diamond", "platinum", "gold", "silver", "bronze", "copper"]
+RANKS = ["master", "diamond", "platinum", "gold", "silver", "bronze", "copper"]
 
 set :public, "#{path}/public"
 set :session, true

@@ -87,15 +87,15 @@ class Scraper
   end
   
   def self.leagueize(league)
+    puts league
     case league[0]         
-    when "maste"      then 1
+    when "master"     then 1
     when "diamond"    then 2
     when "platinum"   then 3
     when "gold"       then 4
     when "silver"     then 5
     when "bronze"     then 6
-    when "copper"     then 6
-    when "none"       then 0
+    when "none"       then -1
     else
       puts "league?: #{league}"
     end
