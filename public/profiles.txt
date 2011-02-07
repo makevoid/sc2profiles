@@ -1,9 +1,9 @@
 http://eu.battle.net/sc2/en/profile/205201/1/Sventra/
 http://eu.battle.net/sc2/en/profile/536792/1/KiM/
-http://eu.battle.net/sc2/it/profile/303068/1/Dakkino/
+http://eu.battle.net/sc2/en/profile/303068/1/Dakkino/
 http://eu.battle.net/sc2/en/profile/404517/1/Shark/
 http://eu.battle.net/sc2/en/profile/383350/1/uSeR/
-http://eu.battle.net/sc2/it/profile/235029/1/makevoid/
+http://eu.battle.net/sc2/en/profile/235029/1/makevoid/
 http://eu.battle.net/sc2/en/profile/387780/1/NeV/ 
 http://eu.battle.net/sc2/en/profile/914526/1/Arkhan/
 http://eu.battle.net/sc2/en/profile/266089/1/DiViNo/
@@ -30,5 +30,5 @@ http://eu.battle.net/sc2/en/profile/229896/1/Nicolaxl/
 http://eu.battle.net/sc2/en/profile/671667/1/GarethDrake/
 http://eu.battle.net/sc2/en/profile/612551/1/ciaNo/
 http://eu.battle.net/sc2/en/profile/1646403/1/Odisseo/
-http://eu.battle.net/sc2/it/profile/236679/1/BananaJoe/
-http://eu.battle.net/sc2/it/profile/466931/1/geppOMG/
+http://eu.battle.net/sc2/en/profile/236679/1/BananaJoe/
+http://eu.battle.net/sc2/en/profile/466931/1/geppOMG/
