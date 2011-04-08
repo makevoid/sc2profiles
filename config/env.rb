@@ -10,6 +10,6 @@ DataMapper.setup(:default, "mysql://#{auth}localhost/sc2profiles_#{ENV['RACK_ENV
 # models
 path = File.expand_path "../../", __FILE__
 require "#{path}/models/profile"
-require "#{path}/models/scraper"
 require "#{path}/models/stats"
+require "#{path}/models/scraper"
 

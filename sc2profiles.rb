@@ -20,7 +20,7 @@ end
 
   get '/scrape' do
     Scraper.scrape
-    "scraped successfully!"
+    "scraped successfully! <a href='/'>back home</a>"
   end
 
 unless ENV["RACK_ENV"] == "production"

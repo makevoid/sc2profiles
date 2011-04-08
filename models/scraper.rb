@@ -1,7 +1,15 @@
 class Scraper
   require 'mechanize'
   
-  # todo: screencast how to build a scraper
+  # todo: screencast how to build a scraper ... hmm not like this :D
+  
+  # service spec:
+  #   
+  #   profile: http://eu.battle.net/sc2/en/profile/536792/1/KiM/
+  #
+  #   2v2: http://eu.battle.net/sc2/en/profile/536792/1/KiM/ladder/31121#current-rank
+  #   3v3: http://eu.battle.net/sc2/en/profile/536792/1/KiM/ladder/33118#current-rank
+  #
   
   BASE_URL = "http://eu.battle.net"
   
@@ -11,8 +19,9 @@ class Scraper
     profile_urls = File.read(path+"/public/profiles.txt").split("\n").map{ |n| n.strip }
     #p profile_urls
     agent = Mechanize.new
+    agent.user_agent = "Mac Safari"
     
-    profile_urls.map do |p_url|
+    profile_urls[0..1].map do |p_url|
       page = agent.get(p_url)
       
       name = page.search("h2").first.inner_text#.match(/(\w+)#/)
@@ -21,6 +30,8 @@ class Scraper
 
       
       profile = { name: name, url: p_url, one_league: leagueize(ranks[0]), two_league: leagueize(ranks[1]), three_league: leagueize(ranks[2]), four_league: leagueize(ranks[3]) }
+      
+      p profile
       
       race = page.links.select{ |l| l.href == "ladder/" }.last.text.strip
       profile["race_one"] = race.downcase
@@ -88,6 +99,7 @@ class Scraper
   
   def self.leagueize(league)
     puts league
+    return false if league.nil?
     case league[0]         
     when "master"     then 1
     when "diamond"    then 2
