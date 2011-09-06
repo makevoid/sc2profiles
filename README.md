@@ -1,6 +1,10 @@
 # Sc2Profiles
 
-demo: [sc2profiles.makevoid.com](http://sc2profiles.makevoid.com)
+I'm sorry but I haven't updated the scraping process because I didn't had time to play sc2 and update this. 
+But, if you are interested I can show you what to change in order to make it working again, it should be a matter of going to sc2.com and 
+looking for the updated css tags and maybe (no, surely :p) rework the scraping code a bit. Feel free to contact me for questions or anything in that case! 
+
+    demo: [sc2profiles.makevoid.com](http://sc2profiles.makevoid.com) [inactive]
 
 ## scrape starcraft2 battle.net profiles and view them with sinatra
 
