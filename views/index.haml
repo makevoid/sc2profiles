@@ -1,10 +1,10 @@
 %head
   -# %link{ href: 'http://fonts.googleapis.com/css?family=Inconsolata', rel:'stylesheet', type: 'text/css' }
   %link{ href: "/css/style.css" , rel:'stylesheet', type: 'text/css' }
-      
-      
+
+
 %body
-  -# provare Firequery 
+  -# provare Firequery
   #container
     %table#profiles{ cellspacing: 0 }
       %tr
@@ -21,19 +21,23 @@
           %td.pos #{idx+1}
           %td.name
             %img.race{ src: "/images/#{profile.race_one == "casuale" ? "random" :  profile.race_one}.png" }
-            %div 
+            %div
               %a{ href: profile.url, target: "_blank" }= profile.name
-            
-          %td.one_pts  
+
+          %td.one_pts
             %img.badge{style:"width: 16px;", src: "http://eu.battle.net/sc2/static/images/icons/league/#{rank profile.one_league}-small.png" }
             %div=      profile.one_pts
           %td.one_wins=     profile.one_playeds
           %td.one_lose=     profile.one_wins-profile.one_playeds
           %td.one_playeds=  profile.one_wins
           %td.one_ratio
-            - var = (profile.one_playeds.to_f/profile.one_wins*100*100).round.to_s 
+            - var = (profile.one_playeds.to_f/profile.one_wins*100*100).round.to_s
             = "#{var[0..-3]},#{var[-2..-1]}%"
           %td.one_division #{profile.one_division} ##{profile.one_rank}
-        
-  - upd_at = Stats.first.updated_at.to_time
-  %div.ultimo_aggiornamento= upd_at.strftime("Ultimo aggiornamento: %d/%m/%Y %H:%M") unless upd_at.nil?
+
+  - stats = Stats.first
+
+  - if stats
+    - upd_at = stats.updated_at
+    - upd_at = upd_at.to_time
+    %div.ultimo_aggiornamento= upd_at.strftime("Ultimo aggiornamento: %d/%m/%Y %H:%M") unless upd_at.nil?
